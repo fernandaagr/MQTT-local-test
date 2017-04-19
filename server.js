@@ -1,10 +1,12 @@
-var mosca = require('mosca')
- 
+var mosca = require('mosca')  //importa o mosca
+
+//configurações do broker
 var settings = {
-  port: 1883,
+  port: 1883, //porta de operação do MQTT
   persistence: mosca.persistence.Memory
 };
- 
+
+//cria um broker MQTT com base nas configurações e inicia
 var server = new mosca.Server(settings, function() {
   console.log('Mosca server is up and running')
 });
